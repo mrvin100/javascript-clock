@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* custom css file made by JeanDoe */
+
+/* import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* css variables */
+
+:root{
+	--main-clr: #567;
+/*	--light-bg: #e1d1f1;*/
+	--light-bg: #f1d1e1;
+	--light-clr: #7a7b7c;
+	--black: #1a1b1c;
+	--white: #fff;
+	
+	--body-font: 'Poppins','Ubuntu Mono', sans-serif;
+}
+
+/* initialisation */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	font-weight: normal;
+}
+
+html{
+	font-size: 90%;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column-reverse;
+	align-items: center;
+	gap: 1rem;
+	background: var(--light-bg);
+	font-family: var(--body-font);
+}
+
+/* clock section start */
+
+.clock{
+	border-radius: 50%;
+	background: var(--white);
+	border: 5px solid var(--white);
+	box-shadow: inset 2px 3px 8px 0 rgba(0,0,0,.1);
+}
+
+.wrap{
+	position: relative;
+	width: 350px;
+	height: 350px;
+}
+
+/* needle position */
+
+.minute, .heure{
+	position: absolute;
+	height: 100px; width: 6px;
+	margin: auto;
+	top: -27%; left: 0; bottom: 0; right: 0;
+	transform-origin: bottom center;
+	transform: rotate(0deg);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+	background: var(--black);
+}
+
+.minute{
+	position: absolute;
+	height: 130px;
+	width: 4px;
+	top: -38%;
+	left: 0;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4);
+	transform: rotate(90deg);
+}
+
+.seconde{
+	position: absolute;
+	height: 90px;
+	width: 2px;
+	margin: auto;
+	top: -26%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 4px;
+	background: #ff4b3e;
+	transform-origin: bottom center;
+	transform: rotate(180deg);
+}
+
+/* let's take care of the central point */
+
+.dot{
+	position: absolute;
+	top: 0; left: 0;
+	right: 0; bottom: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--white);
+	border: 2px solid #1b1b1b;
+	margin: auto;
+}
+
+/* Position of remarkable hours */
+
+.twelve{
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	top: .5rem;
+}
+.six{
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: .5rem;
+}
+
+.nine{
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	left: .5rem;
+}
+
+.three{
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	right: .5rem;
+}
+.remark{
+	font-size: 1.3rem;
+	color: var(--light-clr);
+}
+
+.question{
+	padding: 1rem;
+	border-radius: .5rem;
+	position: relative;
+	background: var(--white);	
+}
+
+.question .mark{
+	position: absolute;
+	right: -.5rem;
+	top: -.5rem;
+	font-size: 2rem;
+	background: var(--light-bg);
+	color: var(--white);
+	width: 2.7rem;
+	line-height: 2.4rem;
+	text-align: center;
+	border-radius: 50%;
+	height: 2.7rem;
+}
+
+.question p{
+	background: #faf9f9;
+	padding: 1rem;
+	font-size: 1.2rem;
+}
+.question p{
+	background: #faf9f9;
+	padding: 1rem;
+	font-size: 1.2rem;
+}
+
+.question p i{
+	color: var(--light-clr);
+	margin-right: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
